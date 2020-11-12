@@ -11,21 +11,25 @@ const RepoList = (props) => {
 
   return (
     <table className="RepoList">
-      <tr>
-        <th>Name</th>
-        <th className="hidden-xs">Stars</th>
-        <th className="hidden-xs">Language</th>
-        <th>Owner</th>
-      </tr>
-
-      {props.repos.map((repo) => (
-        <tr onClick={() => handleRowClick(repo)}>
-          <td><strong>{repo.name}</strong></td>
-          <td className="hidden-xs">{repo.stargazers_count}</td>
-          <td className="hidden-xs">{repo.language}</td>
-          <td>{repo.owner.login}</td>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th className="hidden-xs">Stars</th>
+          <th className="hidden-xs">Language</th>
+          <th>Owner</th>
         </tr>
-      ))}
+      </thead>
+
+      <tbody>
+        {props.repos.map((repo) => (
+          <tr key={repo.id} onClick={() => handleRowClick(repo)}>
+            <td><strong>{repo.name}</strong></td>
+            <td className="hidden-xs">{repo.stargazers_count}</td>
+            <td className="hidden-xs">{repo.language}</td>
+            <td>{repo.owner.login}</td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 }

@@ -7,7 +7,7 @@ const RepoDetails = (props) => {
   
   return (
     <div className="RepoDetails">
-      <div class="RepoDetails__header">
+      <div className="RepoDetails__header">
         <h2 className="RepoDetails__title">
           {name}
           <span className="badge">{stargazers_count} Stars</span>

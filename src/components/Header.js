@@ -19,7 +19,7 @@ const Header = (props) => {
   return (
     <header>
       <form onSubmit={handleSearch} className="container">
-        <div class="search__wrapper">
+        <div className="search__wrapper">
           <SearchIcon />
 
           <input
@@ -34,7 +34,9 @@ const Header = (props) => {
             type="submit"
             className="search__button"
             disabled={!searchValue}
-          >Search</button>
+          >
+            Search
+          </button>
         </div>
       </form>
     </header>
