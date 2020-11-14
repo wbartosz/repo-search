@@ -12,7 +12,7 @@ header {
 
 .search-input {
   border: 1px solid var(--light-gray);
-  padding: 15px 82px 15px 40px;
+  padding: 14px 47px 14px 20px;
   border-radius: var(--default-border-radius);
   outline: none;
   width: 100%;
@@ -39,32 +39,23 @@ header {
 }
 
 .SearchIcon {
-  position: absolute;
-  height: 16px;
+  height: 15px;
   fill: var(--gray);
-  padding: 0px 15px;
-  pointer-events: none;
+  transition: fill 0.3s ease-in-out;
 }
 
 .search__button {
   position: absolute;
-  right: 9px;
-  height: 30px;
-  background-color: black;
-  color: white;
+  right: 0;
+  height: 47px;
+  width: 47px;
+  background-color: transparent;
   border: 0;
   border-radius: 8px;
-  padding: 0px 12px;
-  outline: none;
-  cursor: pointer;
-  transition: opacity 0.45s ease-in-out;
+  padding: 0;
 }
 
-.search__button:hover {
-  opacity: 0.6;
-}
-
-.search__button:disabled {
-  cursor: not-allowed;
-  opacity: 0.15;
+.search__button:hover .SearchIcon,
+.search__button:focus .SearchIcon {
+  fill: #737373;
 }

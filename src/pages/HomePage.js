@@ -1,17 +1,14 @@
 import React from 'react';
+import { searchInputFocus } from '../helpers';
 
 const HomePage = () => {
   return (
     <>
       <h1 className="border-bottom--light">Repositories</h1>
-      <a onClick={searchInputFocus}>Search a repository</a>
+
+      <button className="btn__link" onClick={searchInputFocus}>Search a repository</button>
     </>      
   );
-}
-
-function searchInputFocus() {
-  const searchInput = document.getElementById('search-input');
-  searchInput.focus();
 }
 
 export default HomePage;
