@@ -33,7 +33,7 @@ const Header = (props) => {
     <header>
       <form onSubmit={handleSearch} className="container" role="search">
         <div className="search__wrapper">
-          <label for="search-input" className="visually-hidden">Search</label>
+          <label htmlFor="search-input" className="visually-hidden">Search</label>
           <input
             value={searchValue}
             onChange={handleChange}
