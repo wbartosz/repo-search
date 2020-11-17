@@ -137,3 +137,7 @@ a:focus,
   font-weight: 500;
   margin-left: 15px;
 }
+
+.visually-hidden {
+	display: none;
+}
