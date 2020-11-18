@@ -5,8 +5,8 @@ import './RepoList.css';
 const RepoList = (props) => {
   let history = useHistory();
 
-  function handleRowClick(row) {
-    history.push(`/repos/${row.owner.login}/${row.name}`)
+  function handleRowClick({ owner, name }) {
+    history.push(`/repos/${owner.login}/${name}`)
   }
 
   return (

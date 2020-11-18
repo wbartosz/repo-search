@@ -8,7 +8,7 @@ const DetailsPage = (props) => {
   const { match } = props;
   const [details, setDetails] = useState({});
 
-  const { response, error, isLoading } = useFetch(
+  const { response, isLoading } = useFetch(
     `${GET_REPO_URL}/${match.params.owner}/${match.params.repo}`
   );
 

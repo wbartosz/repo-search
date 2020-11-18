@@ -15,7 +15,6 @@ export const useFetch = (url, options) => {
       setIsLoading(true);
 
       try {
-        console.log('fetch data');
         const res = await fetch(url, { ...options, signal });
         const json = await res.json();
         setResponse(json);
@@ -41,6 +40,6 @@ export const useFetch = (url, options) => {
 };
 
 export const searchInputFocus = () => {
-  const searchInput = document.getElementById('search-input');
+  const searchInput = document.getElementById('header-search-input');
   searchInput.focus();
 }
